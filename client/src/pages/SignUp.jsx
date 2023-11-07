@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import OAuth from "../components/OAuth";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({});
@@ -44,39 +43,38 @@ const SignUp = () => {
   };
 
   return (
-    <div className="p-3 max-w-lg mx-auto">
-      <h1 className="text-3xl text-center font-semibold my-7">Sign Up</h1>
+    <div className="max-w-lg p-3 mx-auto">
+      <h1 className="text-3xl font-semibold text-center my-7">Sign Up</h1>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           type="text"
           placeholder="Username"
-          className="border p-3 rounded-lg"
+          className="p-3 border rounded-lg"
           id="username"
           onChange={handleChange}
         />
         <input
           type="email"
           placeholder="Email Address"
-          className="border p-3 rounded-lg"
+          className="p-3 border rounded-lg"
           id="email"
           onChange={handleChange}
         />
         <input
           type="password"
           placeholder="Password"
-          className="border p-3 rounded-lg"
+          className="p-3 border rounded-lg"
           id="password"
           onChange={handleChange}
         />
         <button
           disabled={loading}
           type="submit"
-          className="bg-blue-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+          className="p-3 text-white uppercase bg-blue-700 rounded-lg hover:opacity-95 disabled:opacity-80"
         >
           {loading ? "Loading...." : "Sign Up"}
         </button>
-        <OAuth />
       </form>
 
       <div className="flex gap-2 mt-5">
@@ -86,7 +84,7 @@ const SignUp = () => {
         </Link>
       </div>
 
-      {error && <p className="text-red-500 mt-5">{error}</p>}
+      {error && <p className="mt-5 text-red-500">{error}</p>}
     </div>
   );
 };

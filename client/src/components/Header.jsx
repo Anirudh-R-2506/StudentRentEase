@@ -29,21 +29,21 @@ const Header = () => {
 
   return (
     <header className="bg-blue-100 shadow-md">
-      <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
+      <div className="flex items-center justify-between max-w-6xl p-3 mx-auto">
         <Link to={"/"}>
-          <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
-            <span className="text-blue-500">Alpha97</span>
-            <span className="text-blue-700">Estate</span>
+          <h1 className="flex flex-wrap text-sm font-bold sm:text-xl">
+            <span className="text-blue-500">Student</span>
+            <span className="text-blue-700">RentEase</span>
           </h1>
         </Link>
         <form
           onSubmit={handleSubmit}
-          className="bg-blue-50 p-3 rounded-lg flex items-center"
+          className="flex items-center p-3 rounded-lg bg-blue-50"
         >
           <input
             type="text"
             placeholder="Search..."
-            className="bg-transparent focus:outline-none w-24 sm:w-64"
+            className="w-24 bg-transparent focus:outline-none sm:w-64"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -53,12 +53,12 @@ const Header = () => {
         </form>
         <ul className="flex gap-4">
           <Link to={"/"}>
-            <li className="hidden sm:inline text-blue-700 hover:underline">
+            <li className="hidden text-blue-700 sm:inline hover:underline">
               Home
             </li>
           </Link>
           <Link to={"/about"}>
-            <li className="hidden sm:inline text-blue-700 hover:underline">
+            <li className="hidden text-blue-700 sm:inline hover:underline">
               About
             </li>
           </Link>
@@ -66,12 +66,12 @@ const Header = () => {
           <Link to={"/profile"}>
             {currentUser ? (
               <img
-                className="rounded-full h-7 w-7 object-cover"
+                className="object-cover rounded-full h-7 w-7"
                 src={currentUser.avatar}
                 alt="profile"
               />
             ) : (
-              <li className=" text-blue-700 hover:underline">Sign In</li>
+              <li className="text-blue-700 hover:underline">Sign In</li>
             )}
           </Link>
         </ul>

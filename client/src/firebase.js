@@ -5,12 +5,9 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: "alphaestate-37e93.firebaseapp.com",
-  projectId: "alphaestate-37e93",
-  storageBucket: "alphaestate-37e93.appspot.com",
-  messagingSenderId: "164896790958",
-  appId: "1:164896790958:web:c7576242c3b323e9c4503f",
+  /* apiKey: import.meta.env.VITE_FIREBASE_API_KEY, */
+  projectId: "flatrent-7b71e",
+  storageBucket: "flatrent-7b71e.appspot.com",
 };
 
 // Initialize Firebase
